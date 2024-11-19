@@ -1,4 +1,28 @@
-function Portfolio() {
+// Portfolio.js
+import React from 'react';
+import ProjectCard from '../components/organims/cardproject';
+
+const Portfolio = () => {
+  // Define an array of project data
+  const projects = [
+    {
+      title: "Project One",
+      description: "A description of the first project that I worked on. This project showcases the features and skills I used during development.",
+      imageUrl: "https://via.placeholder.com/400x250",
+    },
+    {
+      title: "Project Two",
+      description: "A description of the second project. It includes some advanced features that demonstrate my skills in a different area.",
+      imageUrl: "https://via.placeholder.com/400x250",
+    },
+    {
+      title: "Project Three",
+      description: "This is a third project that showcases another set of features and technologies.",
+      imageUrl: "https://via.placeholder.com/400x250",
+    },
+    // Add more projects here as needed
+  ];
+
   return (
     <div className="min-h-screen bg-base-200 p-10">
       {/* Header Section */}
@@ -10,33 +34,19 @@ function Portfolio() {
       </header>
 
       {/* Project Card Section */}
-      <section className="w-full h-screen flex flex-col  items-center space-y-6">
-        {/* Card 1 */}
-        <div className="card w-full md:w-1/2 bg-base-100 shadow-xl flex flex-col md:flex-row justify-center">
-          <figure className="w-full md:w-1/2">
-            <img
-              src="https://via.placeholder.com/400x250"
-              alt="Project"
-              className="w-full h-full object-cover"
-            />
-          </figure>
-
-          <div className="card-body p-6 flex flex-col justify-between">
-            <h2 className="card-title text-2xl font-semibold">Project One</h2>
-            <p className="text-lg mt-4">
-              A description of the first project that I worked on. This project
-              showcases the features and skills I used during development.
-            </p>
-            <div className="card-actions justify-end mt-6">
-              <button className="btn btn-primary">View Details</button>
-            </div>
-          </div>
-        </div>
-
-        {/* Add more cards if needed */}
+      <section className="w-full h-screen flex flex-col items-center space-y-10">
+        {/* Dynamically generate Project Cards */}
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            description={project.description}
+            imageUrl={project.imageUrl}
+          />
+        ))}
       </section>
     </div>
   );
-}
+};
 
 export default Portfolio;

@@ -7,7 +7,7 @@ function Index() {
 
         <div className="w-full md:w-1/2 text-center md:text-left z-10">
           <h1 className="text-4xl font-semibold mb-3">
-            Hi,👋 I am <span className="text-yellow-300">akskask</span>
+            Hi,👋 I am <span className="text-yellow-300">Rendi</span>
           </h1>
           <h3 className="text-2xl font-medium mb-3">A Junior Developer</h3>
           <p className="text-lg font-light mb-6">

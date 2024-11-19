@@ -1,58 +1,15 @@
-const workExperienceData = [
-  {
-    title: "Software Engineer at XYZ Corp",
-    date: "June 2022 - Present",
-    description:
-      "Worked on building scalable web applications and optimizing backend systems using Node.js and MongoDB.",
-  },
-  {
-    title: "Frontend Developer at ABC Inc",
-    date: "January 2020 - May 2022",
-    description:
-      "Developed responsive user interfaces using React, ensuring a seamless experience across devices and platforms.",
-  },
-];
-
-const educationData = [
-  {
-    title: "Computer Science - University of Tech",
-    date: "Graduated: 2019",
-    description:
-      "Focused on software engineering, data structures, algorithms, and full stack web development.",
-  },
-  {
-    title: "High School Diploma - Tech High School",
-    date: "Graduated: 2015",
-    description:
-      "Specialized in computer science, mathematics, and physics, laying a solid foundation for my software engineering journey.",
-  },
-];
-
-const WorkExperienceCard = ({ title, date, description }) => (
-  <div className="card shadow-xl bg-white p-6">
-    <h3 className="text-xl font-bold text-gray-800">{title}</h3>
-    <p className="text-sm text-gray-600">{date}</p>
-    <p className="text-gray-700">{description}</p>
-  </div>
-);
-
-const EducationCard = ({ title, date, description }) => (
-  <div className="card shadow-xl bg-white p-6">
-    <h3 className="text-xl font-bold text-gray-800">{title}</h3>
-    <p className="text-sm text-gray-600">{date}</p>
-    <p className="text-gray-700">{description}</p>
-  </div>
-);
+import Resume from "../components/organims/cardresume";
+import CardsStack from "../components/organims/cardstack";
 
 function About() {
   return (
-    <div className="min-h-screen py-10 ">
+    <div className="min-h-screen py-10">
       <div className="max-w-6xl mx-auto px-4">
         <div className="mb-10 pt-24">
           <div className="relative flex justify-center">
             {/* Profile Image with shadow */}
             <img
-              src="https://via.placeholder.com/150"
+              src="https://i.pinimg.com/736x/cd/70/37/cd70376120da1f06e7f08b4d1e36667c.jpg"
               alt="Profile"
               className="w-h-52 h-52 rounded-full border-4 border-blue-500 shadow-lg transition-transform transform hover:scale-110"
             />
@@ -77,54 +34,12 @@ function About() {
             reliable developer.
           </p>
         </div>
+        <Resume />
 
-        {/* Work Experience and Education Section */}
-        <section className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Work Experience */}
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-              Work Experience
-            </h2>
-            {workExperienceData.map((experience, index) => (
-              <WorkExperienceCard
-                key={index}
-                title={experience.title}
-                date={experience.date}
-                description={experience.description}
-              />
-            ))}
-          </div>
+        <h1 className="text-4xl font-bold text-slate-100 mb-11 text-left">TechStack</h1>
+        <CardsStack />
 
-          {/* Education */}
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-              Education
-            </h2>
-            {educationData.map((education, index) => (
-              <EducationCard
-                key={index}
-                title={education.title}
-                date={education.date}
-                description={education.description}
-              />
-            ))}
-          </div>
-        </section>
-
-        {/* Tech Stack Section */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-            Tech Stack
-          </h2>
-          <div className="flex flex-wrap gap-4">
-            <span className="badge badge-primary text-white">React</span>
-            <span className="badge badge-secondary text-white">Node.js</span>
-            <span className="badge badge-accent text-white">MongoDB</span>
-            <span className="badge badge-info text-white">PostgreSQL</span>
-            <span className="badge badge-warning text-white">JavaScript</span>
-            <span className="badge badge-success text-white">Git</span>
-          </div>
-        </section>
+        {/* Spotify Playlist Embed */}
       </div>
     </div>
   );
