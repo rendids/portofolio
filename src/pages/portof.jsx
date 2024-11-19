@@ -34,7 +34,7 @@ const Portfolio = () => {
       </header>
 
       {/* Project Card Section */}
-      <section className="w-full h-screen flex flex-col items-center space-y-10">
+      <section className=" flex flex-col items-center space-y-10">
         {/* Dynamically generate Project Cards */}
         {projects.map((project, index) => (
           <ProjectCard
