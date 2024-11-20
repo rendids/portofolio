@@ -11,6 +11,7 @@ import vscodeImage from './stackimage/vscode-.svg'
 import gitImage from './stackimage/git-.svg'
 import githubImage from './stackimage/github-.svg'
 import postmanImage from './stackimage/postman-.svg'
+import cardprojectImage1 from './image.png'
 
-export { htmlImage, jsImage, cssImage, bsImage, laraImage, phpImage, reactImage, mysqlImage, vscodeImage, gitImage, githubImage, postmanImage  };
+export { htmlImage, jsImage, cssImage, bsImage, laraImage, phpImage, reactImage, mysqlImage, vscodeImage, gitImage, githubImage, postmanImage, cardprojectImage1 };
 
